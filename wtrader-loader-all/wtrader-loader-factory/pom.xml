@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.wtrader.loader</groupId>
+		<artifactId>wtrader-loader-all</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>wtrader-loader-factory</artifactId>
+
+	<properties>
+		<main.class>org.wtrader.loader.factory.main.MainExternal</main.class>
+		<shade.name>loader</shade.name>
+	</properties>
+
+	<dependencies>
+		<!-- WTRADER CEP DATABASE -->
+		<dependency>
+			<groupId>org.wtrader.cep</groupId>
+			<artifactId>wtrader-cep-data</artifactId>
+			<version>${wtrader.cep.version}</version>
+		</dependency>
+
+		<!-- WTRADER CEP UTILS -->
+		<dependency>
+			<groupId>org.wtrader.cep</groupId>
+			<artifactId>wtrader-cep-utils</artifactId>
+		</dependency>
+
+		<!-- WTRADER LOADER CRAWLER -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>wtrader-loader-crawler</artifactId>
+		</dependency>
+
+		<!-- WTRADER LOADER DATA -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>wtrader-loader-data</artifactId>
+		</dependency>
+
+		<!-- WTRADER LOADER UTILS -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>wtrader-loader-utils</artifactId>
+		</dependency>
+
+		<!-- APACHE COMMONS IO -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+
+		<!-- JAVAX INJECT -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
+
+		<!-- SPRING TEST -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
+		<!-- SPRING CONTEXT -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<!-- SPRING DATA JPA -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+
+		<!-- MySQL DRIVER -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<!-- HIBERNATE ENTITYMANAGER -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>**/*.properties</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<finalName>wtrader-${shade.name}</finalName>
+						</configuration>
+					</execution>
+				</executions>
+
+				<configuration>
+					<finalName>wpattern-phd-market-data-loader-${project.version}</finalName>
+					<transformers>
+						<transformer
+							implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+							<resource>META-INF/spring.handlers</resource>
+						</transformer>
+						<transformer
+							implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+							<resource>META-INF/spring.schemas</resource>
+						</transformer>
+						<transformer
+							implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+							<manifestEntries>
+								<Main-Class>${main.class}</Main-Class>
+							</manifestEntries>
+						</transformer>
+					</transformers>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

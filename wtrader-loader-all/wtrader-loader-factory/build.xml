@@ -1,0 +1,27 @@
+<project name="wtrader-loader-factory" default="package">
+
+	<property environment="env" />
+
+	<target name="install">
+		<exec executable="${env.MAVEN_HOME}/bin/mvn.bat" dir="../../">
+			<arg value="clean" />
+			<arg value="install" />
+			<arg value="-Dmaven.test.skip=true" />
+		</exec>
+	</target>
+
+	<target name="package">
+		<exec executable="${env.MAVEN_HOME}/bin/mvn.bat">
+			<arg value="package" />
+			<arg value="-Dmaven.test.skip=true" />
+			<arg value="-Dmain.class=org.wtrader.loader.factory.main.MainExternal" />
+			<arg value="-Dshade.name=loader" />
+		</exec>
+	</target>
+
+	<target name="all">
+		<antcall target="install" />
+		<antcall target="package" />
+	</target>
+
+</project>
