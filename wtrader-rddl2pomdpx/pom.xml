@@ -4,21 +4,13 @@
 	<groupId>org.wtrader</groupId>
 	<artifactId>wtrader-rddl2pomdpx</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>commons-math</groupId>
-			<artifactId>commons-math</artifactId>
-			<version>3-3.2</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}libs/commons-math3-3.2.jar</systemPath>
-		</dependency>
-
 		<dependency>
 			<groupId>commons-math</groupId>
 			<artifactId>commons-math</artifactId>
@@ -34,29 +26,37 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/libs/grappa1_4.jar</systemPath>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>commons-math</groupId>
-			<artifactId>commons-math</artifactId>
-			<version>3-3.2</version>
+			<groupId>java_cup</groupId>
+			<artifactId>java_cup</artifactId>
+			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/commons-math3-3.2.jar</systemPath>
+			<systemPath>${project.basedir}/libs/java_cup.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>jlex</groupId>
+			<artifactId>jlex</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/jlex.jar</systemPath>
 		</dependency>
 
 		<dependency>
-			<groupId>commons-math</groupId>
-			<artifactId>commons-math</artifactId>
-			<version>3-3.2</version>
+			<groupId>xercesImpl</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/commons-math3-3.2.jar</systemPath>
+			<systemPath>${project.basedir}/libs/xercesImpl.jar</systemPath>
 		</dependency>
 
 		<dependency>
-			<groupId>commons-math</groupId>
-			<artifactId>commons-math</artifactId>
-			<version>3-3.2</version>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/commons-math3-3.2.jar</systemPath>
+			<systemPath>${project.basedir}/libs/xml-apis.jar</systemPath>
 		</dependency>
 	</dependencies>
 
