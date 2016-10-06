@@ -1,7 +1,7 @@
 non-fluents market_nf {
 	domain = market_domain;
 	objects {
-		computer : {c1,c2};
+		operation : {BUY, DOUBLE_BUY, SELL, DOUBLE_SELL};
 	};
 	non-fluents {
 		REBOOT-PROB = 0.02;

@@ -6,37 +6,32 @@ domain market_domain {
 	};
 	
 	types {
-  		computer : object;
+  		operation : object;
+  		enum_level : {@low , @medium , @high };
 	};
       
-	pvariables { 
-    		  		    		  		
+	pvariables {
 		REBOOT-PROB : { non-fluent, real, default = 0.1 };
-		REBOOT-PENALTY : { non-fluent, real, default = 0.1 };
 		OBSERV-PROB : { non-fluent, real, default = 0.95 };
 
-		CONNECTED(computer, computer) : { non-fluent, bool, default = false };
+		CONNECTED(operation, operation) : { non-fluent, bool, default = false };
 
-		running(computer) : { state-fluent, bool, default = false };
+		running(enum_level) : { state-fluent, bool, default = false };
 
-		running-obs(computer) : { observ-fluent, bool };
+		running-obs(operation) : { observ-fluent, bool };
       
-		reboot(computer) : { action-fluent, bool, default = false }; 
+		reboot(operation) : { action-fluent, bool, default = false };
 	};
 	
 	cpfs {
-  
 		running'(?x) = if (reboot(?x))
-						then KronDelta(true)  // if computer is rebooted then must be running 
-						else if (running(?x)) // otherwise outcome depends on network properties
-							then Bernoulli(.45 + .5*[1 + sum_{?y : computer} (CONNECTED(?y,?x) ^ running(?y))] 
-													/ [1 + sum_{?y : computer} CONNECTED(?y,?x)])
-							else Bernoulli(REBOOT-PROB); 
+						then Bernoulli(1 - REBOOT-PROB)
+						else Bernoulli(REBOOT-PROB);
             	
-		running-obs(?x) = if (running'(?x)) 
+		running-obs(?x) = if (running'(?x))
 							then Bernoulli(OBSERV-PROB) 
 							else Bernoulli(1 - OBSERV-PROB);
 	};
   
-	reward = sum_{?c : computer} [running(?c) - (REBOOT-PENALTY * reboot(?c))];
+	reward = sum_{?c : operation} [running(?c) - (0.1 * reboot(?c))];
 }
