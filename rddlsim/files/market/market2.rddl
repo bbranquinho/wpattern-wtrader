@@ -1,0 +1,63 @@
+domain market_domain {
+  
+	requirements = { 
+		reward-deterministic,
+		cpf-deterministic,
+		partially-observed,
+		multivalued
+	};
+	
+	types {
+  		posicao_enum : { @vendido, @comprado, @fora };
+  		tendencia_enum : { @alta, @baixa, @estavel };
+  		observacao_enum : { @ponto_compra, @ponto_venda, @ponto_nada };
+  		acao_enum : { @compra, @compra_dupla, @venda, @venda_dupla, @nada };
+	};
+
+	pvariables {
+		posicao_investidor(posicao_enum): { state-fluent, bool, default = false };
+		
+		negociar(acao_enum): { action-fluent, bool, default = false };
+	};
+	
+	cdfs {
+		posicao_investidor'(?p) =
+			switch (?p) {
+				case @vendido  : (posicao_investidor(@fora) ^ negociar(@venda)) |
+								 (posicao_investidor(@comprado) ^ negociar(@venda_dupla)) |
+								 (posicao_investidor(@vendido) ^ negociar(@venda)) |
+								 (posicao_investidor(@vendido) ^ negociar(@venda_dupla)) |
+								 (posicao_investidor(@vendido) ^ negociar(@nada)) |
+								 (posicao_investidor(@vendido) ^ ~(exists_{?n : acao_enum} negociar(?n))),
+								 
+				case @comprado : (posicao_investidor(@fora) ^ negociar(@compra)) |
+								 (posicao_investidor(@vendido) ^ negociar(@compra_dupla)) |
+								 (posicao_investidor(@comprado) ^ negociar(@compra)) |
+								 (posicao_investidor(@comprado) ^ negociar(@compra_dupla)) |
+								 (posicao_investidor(@comprado) ^ negociar(@nada)) |
+								 (posicao_investidor(@comprado) ^ ~(exists_{?n : acao_enum} negociar(?n))),
+								 
+				case @fora     : (posicao_investidor(@vendido) ^ negociar(@compra)) |
+								 (posicao_investidor(@comprado) ^ negociar(@venda)) |
+								 (posicao_investidor(@fora) ^ negociar(@compra_dupla)) |
+								 (posicao_investidor(@fora) ^ negociar(@venda_dupla)) |
+								 (posicao_investidor(@fora) ^ negociar(@nada)) |
+								 (posicao_investidor(@fora) ^ ~(exists_{?n : acao_enum} negociar(?n)))
+			};
+	};
+  
+	reward = sum_{?p : posicao_enum} posicao_investidor(?p);
+}
+
+
+instance market_instance_01 {
+	domain = market_domain;
+	
+	init-state {
+		posicao_investidor(@fora);
+	};
+
+	max-nondef-actions = 1;
+	horizon  = 40;
+	discount = 1.0;
+}

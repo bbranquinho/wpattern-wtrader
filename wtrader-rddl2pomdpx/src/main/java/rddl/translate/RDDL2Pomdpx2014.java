@@ -6,27 +6,59 @@
 
 package rddl.translate;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Map;
 import java.util.Map.Entry;
 
-import rddl.*;
-import rddl.RDDL.*;
-import rddl.parser.*;
-import mc.McState;
-import util.*;
-
-import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
-import org.apache.xerces.parsers.DOMParser;
-import org.w3c.dom.*;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Text;
 
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.*;
+import mc.McState;
+import rddl.ActionGenerator;
+import rddl.EvalException;
+import rddl.RDDL;
+import rddl.RDDL.AGG_EXPR;
+import rddl.RDDL.BOOL_CONST_EXPR;
+import rddl.RDDL.Bernoulli;
+import rddl.RDDL.CPF_DEF;
+import rddl.RDDL.DOMAIN;
+import rddl.RDDL.DiracDelta;
+import rddl.RDDL.ENUM_TYPE_DEF;
+import rddl.RDDL.ENUM_VAL;
+import rddl.RDDL.EXPR;
+import rddl.RDDL.INSTANCE;
+import rddl.RDDL.INT_CONST_EXPR;
+import rddl.RDDL.KronDelta;
+import rddl.RDDL.LCONST;
+import rddl.RDDL.LVAR;
+import rddl.RDDL.NONFLUENTS;
+import rddl.RDDL.OPER_EXPR;
+import rddl.RDDL.PVARIABLE_DEF;
+import rddl.RDDL.PVAR_INST_DEF;
+import rddl.RDDL.PVAR_NAME;
+import rddl.RDDL.REAL_CONST_EXPR;
+import rddl.State;
+import rddl.parser.parser;
+import util.Pair;
 
 public class RDDL2Pomdpx2014 {
 

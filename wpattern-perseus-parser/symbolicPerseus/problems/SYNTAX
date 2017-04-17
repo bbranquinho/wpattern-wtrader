@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%% Problem Syntax %%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% Author: Pascal Poupart (Copyright 2008)
+%%
+%% The following file describes the formal grammar used to 
+%% encode factored POMDP problems. The format is a subset of the 
+%% SPUDD format originally developed by Jesse Hoey 
+%% (http://www.computing.dundee.ac.uk/staff/jessehoey/spudd/).
+%%
+%% For a simple example that illustrates this syntax, see 
+%% problems/coffee/coffee3po.txt, which encodes the classic coffee 
+%% problem.
+%%
+%% POMDP problems encoded with this syntax can be read by the 
+%% symbolicPerseus package using the matlab command: 
+%% parsePOMDP('path/problemName').  The class javaClasses/ParseSPUDD 
+%% encodes the parser used by symbolicPerseus. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<problem> ::= <decl_list> 
+
+<decl_list> ::= <decl> <decl_list> | NIL
+
+<decl> ::= <state_var_decl> | <obs_var_decl> | <unnormalized_decl> | <dd_decl> | <action_decl> | <reward_decl> | <discount_decl> | <tolerance_decl> 
+
+
+%%%%%%%%%%%%% state/observation variable declaration %%%%%%%%%%%%
+%% examples:
+%%     (variables (current_weather rainy sunny cloudy)
+%%                (has_umbrella true false))
+%%
+%%     (observations (weather_report rainy sunny cloudy))
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<state_var_decl> ::= "(" "variables" <var_def_list> ")"
+
+<obs_var_decl> ::= "(" "observations" <var_def_list> ")"
+
+<var_def_list> ::= <var_def> <var_def_list> | NIL
+
+<var_def> ::= "(" <var_name> <val_name_list> ")"
+
+<var_name> ::= STRING
+
+<val_name_list> ::= <val_name> <val_name_list> | NIL
+
+<val_name> ::= STRING
+
+%%%%%%%%%%%%%% unnormalized declaration %%%%%%%%%%%%%%%%%%%%
+%% Inserting the keywords "unnormalised" or "unnormalized" 
+%% permits the definition of conditional probability 
+%% distributions that are not normalized.  The parser will 
+%% automatically normalize them.  Note that this is dangerous 
+%% since an unnormalized distribution often indicates a typo.  
+%% However by declaring the distributions unnormalized, such 
+%% typos cannot be caught anymore by the parser.  Instead, it 
+%% is recommended to use the "#" operator (see below) to 
+%% normalize distributions on a need basis.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<unnormalized_decl> ::= "unnormalized" | "unnormalised"
+
+
+%%%%%%%%%%%%%%%%% decision diagram %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% examples:
+%%
+%%     // example of a constant: p1 = 5
+%%     dd p1 
+%%         (5) 
+%%     enddd
+%%
+%%     // example of a tree
+%%     dd cpt1 
+%%         (weather_report (rainy (0.1)) 
+%%                         (sunny (0.3)) 
+%%                         (cloudy (0.6))) 
+%%     enddd
+%%
+%%     // example of artithmetic operations
+%%     dd cpt2 
+%%         (actual_weather' (rainy [* (p2) (0.2)])
+%%                          (sunny [* (p2) (0.3)])
+%%                          (cloudy [* (p2) (0.5)]))
+%%     enddd
+%%
+%%     // another tree
+%%     dd rewardFn 
+%%         (actual_weather (rainy (-5)) 
+%%                         (sunny (5)) 
+%%                         (cloudy (-1)))
+%%     enddd
+%%
+%%     // example for the short hand "SAME<var_name>" which is equivalent
+%%     // to the identity function.  The following two dds are equivalent:
+%%     dd identity1
+%%         (SAMEvar)
+%%     end
+%%     dd identity2 
+%%         (var (true  (var' (true (1))
+%%                           (false (0))))
+%%              (false (var' (true (0))
+%%                           (false (1)))))
+%%     enddd
+%%
+%%     // example for the short hand "<var_name><val_name>", 
+%%     // which is equivalent to the deterministic function 
+%%     // that assigns 1 to val_name and probability 0 to 
+%%     // all other values.  The following two dds are equivalent:
+%%     dd deterministic1
+%%         (vartrue)
+%%     enddd
+%%     dd deterministic2
+%%         (var (true (1)) (false (0)))
+%%     enddd
+%%    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<dd_decl> ::= "dd" <dd_name> <dd> "enddd"
+
+<dd_name> ::= STRING
+
+<dd> ::= "(" <dd_name> ")" | "(" <variable_node> ")" | "(" identity_mapping ")" | "(" <value_mapping> ")" | "(" NUMBER ")" | "[" <op_node> "]"
+
+<variable_node> ::= <var_name> <child_list>
+
+<child_list> ::= <child> <child_list> | NIL
+
+<child> ::= "(" <val_name> <dd> ")"
+
+<identity_mapping> ::= SAME<var_name>
+
+<value_mapping> ::= <var_name><val_name>
+
+<op_node> ::= <normalize_op_node> | <nary_op_node>
+
+<normalize_op_node> ::= "#" <var_name> <dd>
+
+<nary_op_node> ::= <nary_op> <dd_list>
+
+<nary_op> ::= "+" | "*"
+
+<dd_list> ::= <dd> <dd_list> | NIL
+
+%%%%%%%%%%% action declaration %%%%%%%%%%%%%%%%%
+%% example:
+%%   action get_umbrella
+%%      current_weather (SAMEcurrent_weather)
+%%      has_umbrella (has_umbrellatrue)
+%%      observe
+%%         weather_report (current_weather' (sunny (weather_report' (sunny (0.9))
+%%                                                                  (cloudy (0.1))
+%%                                                                  (rainy (0))))
+%%                                          (cloudy (weather_report' (sunny (0.2))
+%%                                                                   (cloudy (0.6))
+%%                                                                   (rainy (0.2))))
+%%                                          (rainy (weather_report' (sunny (0))
+%%                                                                  (cloudy (0.2))
+%%                                                                  (rainy (0.8)))))
+%%      endobserve
+%%      cost (1)
+%%   endaction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                                                  
+<action_decl> ::= "action" <act_name> <def_list> "endaction"
+
+<act_name> ::= STRING
+
+<def_list> ::= <def> <def_list> | NIL
+
+<def> ::= <state_cpt_def> | <obs_fn_def> | <cost_def>
+
+<state_cpt_def> ::= <var_name> <dd>
+
+<obs_fn_def> ::= "observe" <obs_cpt_def_list> "endobserve"
+
+<obs_cpt_def_list> ::= <obs_cpt_def> <obs_cpt_def_list> | NIL
+
+<obs_cpt_def> ::= <var_name> <dd>
+
+<cost_def> ::= "cost" <dd>
+
+%%%%%%%%% reward, discount and tolerance declarations %%%%%%%
+%% examples:
+%%    reward (current_weather (sunny (0))
+%%                            (cloudy (0))
+%%                            (rainy (has_umbrella (true (0))
+%%                                                 (false (-10)))))
+%%    discount 0.95
+%%    tolerance 0.01
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<reward_decl> ::= "reward" <dd>
+
+<discount_def> ::= "discount" <dd>
+
+<tolerance_def> ::= "tolerance" <dd>
+
+
+%%%%%%%%%%%%%%%%% comments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% examples:
+%%     // the rest of this line are comments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<comment> ::= "//" <string_list> EOL
+
+<string_list> ::= STRING <string_list> | NIL
+

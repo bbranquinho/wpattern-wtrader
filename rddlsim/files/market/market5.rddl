@@ -1,0 +1,76 @@
+domain market_domain {
+  
+	requirements = { 
+		reward-deterministic,
+		cpf-deterministic,
+		partially-observed,
+		multivalued
+	};
+	
+	types {
+  		posicao_enum : { @vendido, @comprado, @fora };
+  		tendencia_passado_enum : { @alta, @baixa, @estavel };
+  		observacao_enum : { @ponto_compra, @ponto_venda, @ponto_nada };
+  		acao_enum : { @compra, @compra_dupla, @venda, @venda_dupla, @nada };
+	};
+
+	pvariables {
+		posicao_investidor(posicao_enum): { state-fluent, bool, default = false };
+		//tendencia_passado(tendencia_passado_enum, acao_enum): { state-fluent, bool, default = false };
+		
+		negociar: { action-fluent, acao_enum, default = @fora };
+	};
+	
+	cdfs {
+		posicao_investidor'(?p) =
+			switch (?p) {
+				case @vendido  : (posicao_investidor(@fora) ^ (negociar == @venda)) |
+								 (posicao_investidor(@comprado) ^ (negociar == @venda_dupla)) |
+								 (posicao_investidor(@vendido) ^ (negociar == @venda)) |
+								 (posicao_investidor(@vendido) ^ (negociar == @venda_dupla)) |
+								 (posicao_investidor(@vendido) ^ (negociar == @nada)) |
+								 (posicao_investidor(@vendido) ^ ~(exists_{?n : acao_enum} negociar == ?n)),
+								 
+				case @comprado : (posicao_investidor(@fora) ^ (negociar == @compra)) |
+								 (posicao_investidor(@vendido) ^ (negociar == @compra_dupla)) |
+								 (posicao_investidor(@comprado) ^ (negociar == @compra)) |
+								 (posicao_investidor(@comprado) ^ (negociar == @compra_dupla)) |
+								 (posicao_investidor(@comprado) ^ (negociar == @nada)) |
+								 (posicao_investidor(@comprado) ^ ~(exists_{?n : acao_enum} negociar == ?n)),
+								 
+				case @fora     : (posicao_investidor(@vendido) ^ (negociar == @compra)) |
+								 (posicao_investidor(@comprado) ^ (negociar == @venda)) |
+								 (posicao_investidor(@fora) ^ (negociar == @compra_dupla)) |
+								 (posicao_investidor(@fora) ^ (negociar == @venda_dupla)) |
+								 (posicao_investidor(@fora) ^ (negociar == @nada)) |
+								 (posicao_investidor(@fora) ^ ~(exists_{?n : acao_enum} negociar == ?n))
+			};
+			
+		//tendencia_passado'(?t) = Bernoulli(tendencia_passado_prob(?t, ));
+		
+//		  alive'(?x,?y) = if (forall_{?y2 : y_pos} ~alive(?x,?y2))
+//						then Bernoulli(PROB_REGENERATE) // Rule 6
+//
+//						else if ([alive(?x,?y) ^ (count-neighbors(?x,?y) >= 2) 
+//								^ (count-neighbors(?x,?y) <= 3)]
+//						    | [~alive(?x,?y) ^ (count-neighbors(?x,?y) == 3)]
+//						    | set(?x,?y))
+//						then Bernoulli(PROB_REGENERATE)
+//						else Bernoulli(1.0 - PROB_REGENERATE);
+	};
+  
+	reward = sum_{?p : posicao_enum} posicao_investidor(?p);
+}
+
+
+instance market_instance_01 {
+	domain = market_domain;
+	
+	init-state {
+		posicao_investidor(@fora);
+	};
+
+	max-nondef-actions = 1;
+	horizon  = 40;
+	discount = 1.0;
+}

@@ -1,0 +1,189 @@
+// handwashing pomdp spec
+// planstep is as usual  (see http://www.cs.toronto.edu/~jhoey/papers/zmj.pdf)
+// behavior describes what the user has just done
+// responsive describes if the user will respond to a prompt if given
+// aware describes how aware the user is of their current situation
+// responsive-aware pairs describe the following (Extreme) user types
+// responsive,aware  : user will do the right thing if left alone, but will also respond to prompts
+// responsive,!aware : user will not do anything if left alone, but will respond to prompts
+// !responsive, aware :   user will do the right thing if left alone, and will ignore prompts
+// !responsive,!aware : user will not do anything if left alone, and ignores prompts (e.g. the user is asleep)
+(variables 
+	(planstep a b c d e g j h k)
+	(behavior nothing wet taps soap dry)
+	(responsive no yes)
+	(aware	    no yes)
+)
+(observations	(handpos away sink water tap soap towel))
+//belief
+//	planstep	(1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0)
+//	responsive	(0.5 0.5)
+//	aware		(0.5 0.5)
+//	behavior	(1.0 0.0 0.0 0.0 0.0)
+//endbelief
+init [* (planstep (a (1.0)) (b (0.0)) (c (0.0)) (d (0.0)) (e (0.0)) (g (0.0)) (h (0.0)) (j (0.0)) (k (0.0)))
+        (responsive (no (0.5)) (yes (0.5)))
+        (aware (no (0.5)) (yes (0.5)))
+        (behavior (nothing (1.0)) (wet (0.0)) (taps (0.0)) (soap (0.0)) (dry (0.0)))]
+unnormalised
+dd handPosCPT
+    (behavior' (nothing   (handpos' (away (0.5))  (sink (0.5))  (water (0.01)) (tap (0.01)) (soap (0.01)) (towel (0.01))))
+			  (wet	     (handpos' (away (0.01)) (sink (0.2))  (water (0.5))  (tap (0.01)) (soap (0.01)) (towel (0.01))))
+			  (taps	     (handpos' (away (0.01)) (sink (0.1))  (water (0.2))  (tap (0.5))  (soap (0.01)) (towel (0.01))))
+			  (soap	     (handpos' (away (0.01)) (sink (0.2))  (water (0.01)) (tap (0.01)) (soap (0.5))  (towel (0.01))))
+			  (dry	     (handpos' (away (0.01)) (sink (0.2))  (water (0.1))  (tap (0.01)) (soap (0.01)) (towel (0.5)))))
+enddd
+dd planstepdd
+       (planstep	(a	(behavior'	(nothing	(planstepa))
+							(wet		(planstepa))
+							(taps		(planstepb))
+							(soap		(planstepe))
+							(dry		(planstepa))))
+				(b	(behavior'	(nothing	(planstepb))
+							(wet		(planstepc))
+							(taps		(planstepb))
+							(soap		(planstepd))
+							(dry		(planstepb))))
+				(c	(behavior'	(nothing	(planstepc))
+							(wet		(planstepc))
+							(taps		(planstepc))
+							(soap		(planstepd))
+							(dry		(planstepb))))
+				(d	(behavior'	(nothing	(planstepd))
+							(wet		(planstepg))
+							(taps		(planstepd))
+							(soap		(planstepd))
+							(dry		(planstepb))))
+				(e	(behavior'	(nothing	(planstepe))
+							(wet		(planstepe))
+							(taps		(planstepd))
+							(soap		(planstepe))
+							(dry		(planstepb))))
+				(g	(behavior'	(nothing	(planstepg))
+							(wet		(planstepg))
+							(taps		(plansteph))
+							(soap		(planstepd))
+							(dry		(planstepj))))
+				(h	(behavior'	(nothing	(plansteph))
+							(wet		(plansteph))
+							(taps		(planstepg))
+							(soap		(planstepe))
+							(dry		(planstepk))))
+				(j	(behavior'	(nothing	(planstepj))
+							(wet		(planstepg))
+							(taps		(planstepk))
+							(soap		(planstepd))
+							(dry		(planstepj))))
+				(k	(behavior'	(nothing	(planstepk))
+							(wet		(planstepk))
+							(taps		(planstepj))
+							(soap		(planstepe))
+							(dry		(planstepk)))))
+enddd
+dd correctBehavior
+      (planstep	(a	[+	(behaviortaps)	(behaviorsoap)])
+		(b	[+	(behaviorwet)		(behaviorsoap)])
+		(c	(behaviorsoap))
+		(d	(behaviorwet))
+		(e	(behaviortaps))
+		(g	[+	(behaviortaps)	(behaviordry)])
+		(h	(behaviordry))
+		(j	(behaviortaps))
+		(k	(behaviornothing)))
+enddd
+dd nullBehavior
+   (behavior'	(nothing	(0.5))
+		(wet		(0.1))
+		(taps		(0.1))
+		(soap		(0.1))
+		(dry		(0.1)))
+enddd
+dd behDynAware
+   (aware'	(yes	[+ (2.0) (correctBehavior)])
+		(no	(nullBehavior)))
+enddd
+dd responseFactor
+   (2.0)
+enddd
+action nothing
+       planstep	(planstepdd)
+       aware	(SAMEaware)
+       responsive	(SAMEresponsive)
+       behavior	(behDynAware)
+       observe  
+            handpos	(handPosCPT)
+       endobserve 
+endaction
+action wet_hands
+       planstep	(planstepdd)
+       aware	(SAMEaware)
+       responsive	(SAMEresponsive)
+       behavior	(responsive'	(no	(behDynAware))
+				(yes	[+	(behDynAware)	[* (responseFactor) (behaviorwet)]]))
+       observe
+            handpos	(handPosCPT)
+       endobserve
+       cost (aware		(no	(0.2))
+				(yes	(0.8)))
+endaction
+action turnon_water
+       planstep	(planstepdd)
+       aware	(SAMEaware)
+       responsive	(SAMEresponsive)
+       behavior	(responsive'	(no	(behDynAware))
+				(yes	[+	(behDynAware)	[* (responseFactor) (behaviortaps)]]))
+       observe
+            handpos	(handPosCPT)
+       endobserve
+       cost (aware		(no	(0.2))
+				(yes	(0.8)))
+endaction
+action turnoff_water
+       planstep	(planstepdd)
+       aware	(SAMEaware)
+       responsive	(SAMEresponsive)
+       behavior	(responsive'	(no	(behDynAware))
+				(yes	[+	(behDynAware)	[* (responseFactor) (behaviortaps)]]))
+       observe
+            handpos	(handPosCPT)
+       endobserve
+       cost (aware		(no	(0.2))
+				(yes	(0.8)))
+endaction
+action use_soap
+       planstep	(planstepdd)
+       aware	(SAMEaware)
+       responsive	(SAMEresponsive)
+       behavior	(responsive'	(no	(behDynAware))
+				(yes	[+	(behDynAware)	[* (responseFactor) (behaviorsoap)]]))
+       observe
+            handpos	(handPosCPT)
+       endobserve
+       cost (aware		(no	(0.2))
+				(yes	(0.8)))
+endaction
+action dry_hands
+       planstep	(planstepdd)
+       aware	(SAMEaware)
+       responsive	(SAMEresponsive)
+       behavior	(responsive'	(no	(behDynAware))
+				(yes	[+	(behDynAware)	[* (responseFactor) (behaviordry)]]))
+       observe
+            handpos	(handPosCPT)
+       endobserve
+       cost (aware		(no	(0.2))
+				(yes	(0.8)))
+endaction
+reward	(planstep	(a	(0.0))
+			(b	(0.2))
+			(c	(0.2))
+			(d	(0.2))
+			(e	(0.2))
+			(g	(0.2))
+			(h	(0.2))
+			(j	(1.0))
+			(k	(20.0)))
+discount 0.9
+//horizon 1000
+tolerance 0.001
+

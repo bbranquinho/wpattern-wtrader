@@ -1,0 +1,127 @@
+Software: Symbolic Perseus
+Author: Pascal Poupart (Copyright 2007)
+
+Release Log
+-----------
+
+2009-05-08 Release
+
+* Bug fix: the functions tracePOMDPpolicy*.m did not update the belief
+  state.  This is now fixed.  Thanks to Matthijs Spaan for pointing
+  out this bug.
+
+* Release of a third large scale handwashing problem.  This is the
+  encoding used in the following paper:
+
+Automated Handwashing Assistance for Persons with Dementia Using Video
+and a Partially Observable Markov Decision Processes
+Jesse Hoey, Pascal Poupart, Axel von Bertoldi, Tamy Craig, Craig Boutilier and Alex Mihailidis
+Computer Vision and Image Understanding (CVIU), accepted January 2009.
+
+2008-03-24 Release
+
+* Two large scale handwashing problems and a series of system
+  administration networks are now included in the distribution (see
+  problems/README for more details). These problems are the large
+  factored POMDPs that are featured in the following papers: 
+
+Assisting Persons with Dementia during Handwashing Using a Partially Observable Markov Decision Process
+Jesse Hoey, Axel von Bertoldi, Pascal Poupart, and Alex Mihailidis
+In Proceedings of the International Conference on Vision Systems (ICVS), Biefeld, Germany, 2007.
+
+A Decision-Theoretic Approach to Task Assistance for Persons with Dementia
+Jennifer Boger, Pascal Poupart, Jesse Hoey, Craig Boutilier, Geoff Fernie, and Alex Mihailidis
+In Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI), pages 1293-1299, Edinburgh, Scotland, 2005
+
+Exploiting Structure to Efficiently Solve Large Scale Partially Observable Markov Decision Processes
+Pascal Poupart
+Ph.D. thesis, Department of Computer Science, University of Toronto, Toronto, 2005
+
+VDCBPI: an Approximate Scalable Algorithm for Large Scale POMDPs
+Pascal Poupart and Craig Boutilier
+In Advances in Neural Information Processing Systems 17 (NIPS), pages 1081-1088, Vancouver, BC, 2004
+
+* A description of the formal grammar used to encode factored POMDP
+  problems is included in problems/SYNTAX 
+
+* A new function convertPOMDP2CassandraFormat can be used to convert
+  factored POMDPs to Cassandra's flat POMDP format.  Note however that
+  the conversion can only be done for small problems since Cassandra's
+  format requires the enumeration of all states.
+
+
+2008-03-17 Release
+
+* Tracing/executing policies: 3 new functions (tracePOMDPpolicyGraph,
+  tracePOMDPpolicyStationary and tracePOMDPpolicyNonStationary) have
+  been added to ease the process of executing/tracing policies.
+  Previously, the execution of a policy was done by looping through some
+  instructions that required the manual encoding of an unfriendly
+  obsConfig matrix.  The new functions automate this process and provide
+  a user friendly interface to input the observations.
+
+2008-02-27 Release
+
+* solvePOMDP.m: all parameters of the code can now be set by passing
+  appropriate arguments to the solvePOMDP function.  Type "help
+  solvePOMDP" for a summary of the parameters and their default values.
+
+* Belief points can now be sampled with several initial policies:
+  - MDP: MDP policy is simulated by choosing actions based on the true 
+    underlying state
+  - QMDP: QMDP policy with look ahead search
+  - random: actions are chosen at random (uniformly)
+  It is also possible to mix the above policies with random actions by 
+  specifying a non-zero exploration probability. The default policy is
+  QMDP with a look ahead depth of 1 and exploration probability of 0.
+
+* It is possible to specify a number of "rounds" such that the set of
+  belief points is re-sampled after each round. The policy at the end of
+  the previous round is executed (with some exploration probability) to
+  re-sample the belief points.  By default, only one round is performed.
+
+* The value function is now initialized (by default) to the alpha
+  vectors corresponding to pure strategies (i.e., policies that always
+  execute the same action).
+
+* 3 policies can be evaluated:
+  - evalPOMDPpolicyGraph: selects actions based on the policy graph that is 
+    computed by symbolic perseus.  The value of the initial belief state 
+    reported by symbolic perseus is an estimate of the policy graph.  The 
+    policy graph is the fastest to execute since there is no need for 
+    finding the best alpha vector at each belief.
+  - evalPOMDPpolicyNonStationary: selects actions by finding the best alpha 
+    vector computed at each iteration of symbolic perseus.  This requires a 
+    lot of memory since the value function computed at each iteration must 
+    be loaded in memory.  However, this policy is strictly better than the 
+    policy graph.  
+  - evalPOMDPpolicyStationary: selects actions by finding the best alpha 
+    vector of the last iteration of symbolic perseus.  Hence only the value 
+    function of the last iteration needs to be loaded in memory, which 
+    reduces memory requirements.  However, the policy may have a value 
+    arbitrarily lower than that of the non-stationary policy or the 
+    policy graph.  
+
+* Various speed ups have been incorporated.
+
+* Typos have been corrected in the example "problems/coffee3po.txt"
+
+2007-04-20 Release
+
+* Java code now compiles without any warning with javac 1.5.0.
+
+* Bug fix in dd_reachableBeliefRegion.m: the set of belief points used
+  to be sampled by always executing action 1 (which is ok for the
+  handwashing problem cppo3.txt, but not for other problems.  Belief
+  points are now sampled by executing a random policy that selects an
+  action at random at each step.  Thanks to Jesse Hoey for pointing out
+  this problem.
+
+* Inclusion of a second POMDP example: the classic coffee
+  problem. Thanks to Jesse Hoey for encoding the problem and dutifully
+  documenting the encoding. It provides an intuitive example of how to
+  encode POMDPs to be solved by Symbolic Perseus.
+
+2007-04-17 Release
+
+* Initial Release

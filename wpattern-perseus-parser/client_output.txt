@@ -1,0 +1,9067 @@
+Loading: files/boolean/rddl/game_of_life_nointerm_pomdp.rddl
+Loading: files/boolean/rddl/sysadmin_bool_mdp.rddl
+Loading: files/boolean/rddl/game_of_life_nointerm_mdp.rddl
+Loading: files/boolean/rddl/sysadmin_bool_pomdp.rddl
+RDDL client initialized
+2:30
+[ Memory usage: 10.02Mb / 100.53Mb = 0.1 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 15.96Mb / 100.53Mb = 0.16 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 22.13Mb / 100.53Mb = 0.22 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+[ Memory usage: 2.87Mb / 100.53Mb = 0.03 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 8.61Mb / 100.53Mb = 0.09 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 14.36Mb / 100.53Mb = 0.14 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 20.65Mb / 100.53Mb = 0.21 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 26.42Mb / 100.53Mb = 0.26 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 5.99Mb / 100.53Mb = 0.06 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 11.81Mb / 100.53Mb = 0.12 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 18.09Mb / 100.53Mb = 0.18 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 23.89Mb / 100.53Mb = 0.24 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+[ Memory usage: 3.92Mb / 100.53Mb = 0.04 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 9.66Mb / 100.53Mb = 0.1 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+[ Memory usage: 15.41Mb / 100.53Mb = 0.15 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+[ Memory usage: 21.75Mb / 100.53Mb = 0.22 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+[ Memory usage: 1.29Mb / 100.53Mb = 0.01 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 7.14Mb / 100.53Mb = 0.07 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 13.11Mb / 100.53Mb = 0.13 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+[ Memory usage: 19Mb / 100.53Mb = 0.19 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+[ Memory usage: 25.4Mb / 100.53Mb = 0.25 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+[ Memory usage: 4.97Mb / 100.53Mb = 0.05 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+[ Memory usage: 10.89Mb / 100.53Mb = 0.11 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+[ Memory usage: 16.72Mb / 100.53Mb = 0.17 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+[ Memory usage: 22.66Mb / 100.53Mb = 0.23 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+[ Memory usage: 2.75Mb / 104.01Mb = 0.03 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 8.74Mb / 104.01Mb = 0.08 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 14.11Mb / 104.01Mb = 0.14 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+[ Memory usage: 20.16Mb / 104.01Mb = 0.19 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+[ Memory usage: 26.22Mb / 104.01Mb = 0.25 ]
+20
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := false
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := true
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: noop
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y1
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := true
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x2_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := false
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := true
+
+
+--> Action taken: set__x1_y2
+FULL STATE:
+
+set
+- action: set[x1, y1] := false
+- action: set[x1, y2] := false
+- action: set[x2, y1] := false
+- action: set[x2, y2] := true
+alive
+- states: alive[x1, y1] := false
+- states: alive[x1, y2] := true
+- states: alive[x2, y1] := false
+- states: alive[x2, y2] := false
+
+
+--> Action taken: set__x1_y2
+

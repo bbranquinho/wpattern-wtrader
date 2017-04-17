@@ -1,0 +1,174 @@
+domain market_domain {
+  
+	requirements = {
+		continuous,
+		reward-deterministic,
+		partially-observed,
+		multivalued
+	};
+	
+	types {
+  		tendencia_enum : { @alta, @baixa, @estavel };
+  		
+  		posicao_enum : { @vendido, @comprado, @fora };
+  		observacao_enum : { @ponto_compra, @ponto_venda, @ponto_nada };
+  		acao_enum : { @compra, @compra_dupla, @venda, @venda_dupla, @nada };
+	};
+
+	pvariables {
+		tendencia_passado: { state-fluent, tendencia_enum, default = @estavel };
+		tendencia_futuro: { state-fluent, tendencia_enum, default = @estavel };
+		
+		posicao_investidor: { state-fluent, posicao_enum, default = @fora };
+		
+		negociar: { action-fluent, acao_enum, default = @fora };
+	};
+	
+	cpfs {
+		posicao_investidor' = if (((posicao_investidor == @fora) ^ (negociar == @venda)) |
+								 ((posicao_investidor == @comprado) ^ (negociar == @venda_dupla)) |
+								 ((posicao_investidor == @vendido) ^ (negociar == @venda)) |
+								 ((posicao_investidor == @vendido) ^ (negociar == @venda_dupla)) |
+								 ((posicao_investidor == @vendido) ^ (negociar == @nada)) |
+								 ((posicao_investidor == @vendido) ^ ~(exists_{?n : acao_enum} negociar == ?n))) then
+								 @vendido
+							  else if
+							     (((posicao_investidor == @fora) ^ (negociar == @compra)) |
+								 ((posicao_investidor == @vendido) ^ (negociar == @compra_dupla)) |
+								 ((posicao_investidor == @comprado) ^ (negociar == @compra)) |
+								 ((posicao_investidor == @comprado) ^ (negociar == @compra_dupla)) |
+								 ((posicao_investidor == @comprado) ^ (negociar == @nada)) |
+								 ((posicao_investidor == @comprado) ^ ~(exists_{?n : acao_enum} negociar == ?n))) then
+								 @comprado
+							  else 
+								 @fora;
+		
+		tendencia_passado' = Discrete(tendencia_enum,
+								@alta : if ((tendencia_passado == @alta) ^ (tendencia_futuro == @alta)) then
+											0.780
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @baixa)) then
+											0.603
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @estavel)) then
+											0.737
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @alta)) then
+											0.029
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @baixa)) then
+											0.008
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @estavel)) then
+											0.010
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @alta)) then
+											0.337
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @baixa)) then
+											0.124
+										else
+											0.234,
+								@baixa : if ((tendencia_passado == @alta) ^ (tendencia_futuro == @alta)) then
+											0.010
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @baixa)) then
+											0.021
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @estavel)) then
+											0.017
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @alta)) then
+											0.615
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @baixa)) then
+											0.758
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @estavel)) then
+											0.746
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @alta)) then
+											0.095
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @baixa)) then
+											0.316
+										else
+											0.195,
+								@estavel : if ((tendencia_passado == @alta) ^ (tendencia_futuro == @alta)) then
+											0.210
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @baixa)) then
+											0.376
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @estavel)) then
+											0.246
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @alta)) then
+											0.356
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @baixa)) then
+											0.234
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @estavel)) then
+											0.244
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @alta)) then
+											0.568
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @baixa)) then
+											0.560
+										else
+											0.571
+							 );
+		
+		tendencia_futuro' = Discrete(tendencia_enum,
+								@alta : if ((tendencia_passado == @alta) ^ (tendencia_futuro == @alta)) then
+											0.698
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @baixa)) then
+											0.726
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @estavel)) then
+											0.715
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @alta)) then
+											0.016
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @baixa)) then
+											0.024
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @estavel)) then
+											0.019
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @alta)) then
+											0.233
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @baixa)) then
+											0.254
+										else
+											0.255,
+								@baixa : if ((tendencia_passado == @alta) ^ (tendencia_futuro == @alta)) then
+											0.029
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @baixa)) then
+											0.010
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @estavel)) then
+											0.011
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @alta)) then
+											0.746
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @baixa)) then
+											0.613
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @estavel)) then
+											0.708
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @alta)) then
+											0.178
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @baixa)) then
+											0.218
+										else
+											0.181,
+								@estavel : if ((tendencia_passado == @alta) ^ (tendencia_futuro == @alta)) then
+											0.273
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @baixa)) then
+											0.264
+										else if ((tendencia_passado == @alta) ^ (tendencia_futuro == @estavel)) then
+											0.274
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @alta)) then
+											0.238
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @baixa)) then
+											0.363
+										else if ((tendencia_passado == @baixa) ^ (tendencia_futuro == @estavel)) then
+											0.273
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @alta)) then
+											0.589
+										else if ((tendencia_passado == @estavel) ^ (tendencia_futuro == @baixa)) then
+											0.528
+										else
+											0.564
+							 );
+	};
+ 
+	reward = 1;
+}
+
+instance market_instance_01 {
+	domain = market_domain;
+	
+	init-state {
+		posicao_investidor = @fora;
+	};
+
+	max-nondef-actions = 1;
+	horizon  = 40;
+	discount = 1.0;
+}

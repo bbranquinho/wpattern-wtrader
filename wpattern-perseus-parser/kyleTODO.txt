@@ -1,0 +1,16 @@
+Construction
+- game_of_life_pomdp domains clearly broken, both in matlab and java
+- remove all matlab stuff
+- have Policy convert format if conversion not found
+- test if ant can build the .jar
+- change the ./run script from bin/ to build/
+- remove -ea from the run script once development is complete
+
+Testing
+- run large instances for memory and time management testing
+- write some unit tests for POMDP.java
+
+Competition
+- both the java version and the matlab version take REALLY long for the bigger instances of the domains (sysp2, glp2), so we need a method for speeding up the solving process
+- figure out how to send action on first turn (talk to Sungwook)
+- implement lookahead methods

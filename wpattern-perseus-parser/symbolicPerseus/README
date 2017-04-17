@@ -1,0 +1,123 @@
+Brief instructions to install and run symbolicPerseus
+-----------------------------------------------------
+
+Author: Pascal Poupart (ppoupart@cs.uwaterloo.ca)
+Reference: Chapter 5 of Poupart's PhD thesis 
+(http://www.cs.uwaterloo.ca/~ppoupart/publications/ut-thesis/ut-thesis.pdf)
+
+Sections:
+---------
+
+* Installation
+* Lauching Matlab
+* Solving POMDPs
+* Evaluating a policy
+* Tracing/executing a policy
+* POMDP problems
+
+Installation:
+-------------
+
+1) Untar and unzip symbolicPerseus.tgz
+
+>> tar -xvzf symbolicPerseus.tgz
+
+2) Compile the java code with Sun's java SDK.  Use the same version as
+Matlab's java virtual machine.  To check the java version used by
+matlab, type "version -java" at the Matlab prompt.  The java code has
+been compiled with java 1.5.0 without any problem.
+
+>> cd symbolicPerseus/javaClasses
+>> javac *.java
+
+Launching Matlab:
+-----------------
+
+Launch matlab in the symbolicPerseus directory.  This is critical
+since matlab will automatically read the files startup.m and java.opts
+which tell Matlab's java virtual machine where to find the java
+classes (startup.m) and how much memory to allocate (java.opts).
+
+>> cd symbolicPerseus
+>> matlab
+
+N.B. Do not launch matlab with the -nojvm option because that will
+prevent the java virtual machine from starting up.  The code has been
+tested with Matlab 7.3.
+
+Solving POMDPs:
+---------------
+
+Run the "solvePOMDP" function by typing
+
+>> [valueFunction,policy] = solvePOMDP('problems/coffee/coffee3po.txt');
+
+It first parses the POMDP 'coffee3po.txt' encoded in SPUDD format.
+Then some reachable belief states are sampled by following a some
+initial policy (default policy is QMDP with look ahead depth of 1).
+This may take a few minutes. Then the POMDP is solved by running the
+boundedPerseus.m function.  Again, this may take a few minutes per
+iteration.  The value function and policies are automatically saved in
+the file 'problems/coffee/coffee3po_Lbel_Miter_Nsize.mat' indicating that L
+belief states were sampled, M Perseus iterations were performed and at
+most N alpha vectors were computed at each iteration.
+
+There are several parameters that can be passed to the "solvePOMDP"
+function to fine tune the computation.  Type "help solvePOMDP" for a
+summary of these parameters and their default values.
+
+Evaluating a policy:
+--------------------
+
+To evaluate a policy, run one of the evalPOMDPpolicy functions by typing
+
+>> avRew = evalPOMDPpolicyGraph('problems/coffee/coffee3po.txt', 'problems/coffee/coffee3po_Lbel_Miter_Nsize.mat')
+
+or
+
+>> avRew = evalPOMDPpolicyStationary('problems/coffee/coffee3po.txt', 'problems/coffee/coffee3po_Lbel_Miter_Nsize.mat')
+
+or
+
+>> avRew = evalPOMDPpolicyNonStationary('problems/coffee/coffee3po.txt', 'problems/coffee/coffee3po_Lbel_Miter_Nsize.mat')
+
+It averages the total discounted reward earned over 500 runs of 50 steps 
+each.  The average of the runs performed so far is reported after each run. 
+
+Note that evalPOMDPpolicyGraph is the fastest function.  It selects
+actions based on the policy graph that is computed by symbolic
+perseus.  The value of the initial belief state reported by symbolic
+perseus is an estimate of the policy
+graph. evalPOMDPpolicyNonStationary requires a lot of memory but
+executes a policy that is strictly better than the policy graph.
+Actions are selected by finding the best alpha vector computed at each
+iteration of symbolic perseus.  evalPOMDPpolicyStationary selects
+actions by finding the best alpha vector of the last iteration of
+symbolic perseus.  Hence only the value function of the last iteration
+needs to be loaded in memory, which reduces memory requirements.
+However, the policy may have a value arbitrarily lower than that of
+the non-stationary policy or the policy graph.
+
+Tracing/executing a policy:
+---------------------------
+
+To trace a policy by manually choosing the observations, type:
+
+>> tracePOMDPpolicyGraph('problems/coffee/coffee3po.txt', 'problems/coffee/coffee3po_Lbel_Miter_Nsize.mat');
+
+or
+
+>> tracePOMDPpolicyStationary('problems/coffee/coffee3po.txt', 'problems/coffee/coffee3po_Lbel_Miter_Nsize.mat');
+
+or
+
+>> tracePOMDPpolicyNonStationary('problems/coffee/coffee3po.txt', 'problems/coffee/coffee3po_Lbel_Miter_Nsize.mat');
+
+At each step, the action chosen by the policy will be displayed.
+Then the user will be asked to manually enter the observation.
+
+POMDP problems:
+---------------
+
+See the file problems/README for an overview of the POMDP problems
+included with this release.

@@ -1061,7 +1061,7 @@ public class parser extends java_cup.runtime.lr_parser {
 		       //e.printStackTrace();
             }
 
-            return (RDDL)rval.value;		
+            return (RDDL)rval.value;
 	}
 
 

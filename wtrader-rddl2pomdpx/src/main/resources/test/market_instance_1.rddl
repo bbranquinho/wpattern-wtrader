@@ -1,0 +1,20 @@
+non-fluents market_nf {
+	domain = market_domain;
+	objects {
+	};
+	non-fluents {
+	};
+}
+
+instance market_instance_1 {
+	domain = market_domain;
+	non-fluents = market_nf;
+	
+	init-state {
+		posicao_investidor = @fora;
+	};
+
+	max-nondef-actions = 1;
+	horizon  = 40;
+	discount = 1.0;
+}

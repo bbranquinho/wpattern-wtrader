@@ -1,0 +1,590 @@
+[a, b] = solvePOMDP('../files/test_comp/spudd_sperseus/sysadmin_pomdp.sysadmin_inst_pomdp__1.sperseus')
+
+Parsing ../files/test_comp/spudd_sperseus/sysadmin_pomdp.sysadmin_inst_pomdp__1.sperseus
+
+Finished parsing ../files/test_comp/spudd_sperseus/sysadmin_pomdp.sysadmin_inst_pomdp__1.sperseus
+
+Computing qMDP value function
+Bellman Error: 10.000000
+Bellman Error: 9.500000
+Bellman Error: 8.929124
+Bellman Error: 8.725167
+Bellman Error: 8.602788
+Bellman Error: 8.529565
+Bellman Error: 8.483400
+Bellman Error: 8.453870
+Bellman Error: 8.434962
+Bellman Error: 8.422908
+Bellman Error: 8.415262
+Bellman Error: 8.410436
+Bellman Error: 8.407399
+Bellman Error: 8.405494
+Bellman Error: 8.404301
+Bellman Error: 8.403554
+Bellman Error: 8.403088
+Bellman Error: 8.402796
+Bellman Error: 8.402614
+Bellman Error: 8.402501
+Bellman Error: 8.402430
+Bellman Error: 8.402386
+Bellman Error: 8.402358
+Bellman Error: 8.402341
+Bellman Error: 8.402330
+Bellman Error: 8.402324
+Bellman Error: 8.402320
+Bellman Error: 8.402317
+Bellman Error: 8.402315
+Bellman Error: 8.402314
+Bellman Error: 8.402314
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+Bellman Error: 8.402313
+qMDP init value: 424.178917
+
+sampling reachable belief states
+10 belief states sampled
+20 belief states sampled
+30 belief states sampled
+40 belief states sampled
+50 belief states sampled
+60 belief states sampled
+70 belief states sampled
+80 belief states sampled
+90 belief states sampled
+100 belief states sampled
+110 belief states sampled
+120 belief states sampled
+130 belief states sampled
+140 belief states sampled
+150 belief states sampled
+160 belief states sampled
+170 belief states sampled
+180 belief states sampled
+190 belief states sampled
+200 belief states sampled
+210 belief states sampled
+220 belief states sampled
+230 belief states sampled
+240 belief states sampled
+250 belief states sampled
+260 belief states sampled
+270 belief states sampled
+280 belief states sampled
+290 belief states sampled
+300 belief states sampled
+
+running symbolic Perseus
+
+Initializing value function to pure strategies
+Computing pure strategy for action noop
+Computing pure strategy for action reboot__c1
+Computing pure strategy for action reboot__c10
+Computing pure strategy for action reboot__c2
+Computing pure strategy for action reboot__c3
+Computing pure strategy for action reboot__c4
+Computing pure strategy for action reboot__c5
+Computing pure strategy for action reboot__c6
+Computing pure strategy for action reboot__c7
+Computing pure strategy for action reboot__c8
+Computing pure strategy for action reboot__c9
+
+stepRange =
+
+  Columns 1 through 15
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15
+
+  Columns 16 through 30
+
+    16    17    18    19    20    21    22    23    24    25    26    27    28    29    30
+
+  Columns 31 through 45
+
+    31    32    33    34    35    36    37    38    39    40    41    42    43    44    45
+
+  Columns 46 through 50
+
+    46    47    48    49    50
+
+
+stepId =
+
+     1
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 15.346208  worstDecline = 2.232627  initImprovement = 3.305088  initValue = 197.746642
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     2
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.678236  worstDecline = 1.442300  initImprovement = 3.680203  initValue = 201.426845
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     3
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.718481  worstDecline = 0.796421  initImprovement = 3.663095  initValue = 205.089940
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     4
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 13.027950  worstDecline = 1.913688  initImprovement = 4.098620  initValue = 209.188560
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     5
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 17.995016  worstDecline = 1.861034  initImprovement = 4.907424  initValue = 214.095984
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     6
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 17.109693  worstDecline = 2.568687  initImprovement = 5.249043  initValue = 219.345027
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     7
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.409226  worstDecline = 2.118739  initImprovement = 5.060260  initValue = 224.405287
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     8
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.215007  worstDecline = 2.168639  initImprovement = 5.035465  initValue = 229.440752
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+     9
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.897724  worstDecline = 2.053958  initImprovement = 5.112852  initValue = 234.553604
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    10
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.349121  worstDecline = 1.849865  initImprovement = 5.076865  initValue = 239.630469
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    11
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 13.100224  worstDecline = 2.703871  initImprovement = 5.376757  initValue = 245.007226
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    12
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.158154  worstDecline = 2.287026  initImprovement = 5.496487  initValue = 250.503713
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    13
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.407298  worstDecline = 2.221844  initImprovement = 5.143585  initValue = 255.647298
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    14
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 8.303639  worstDecline = 2.295821  initImprovement = 5.100904  initValue = 260.748202
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    15
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 13.517156  worstDecline = 2.944034  initImprovement = 5.256826  initValue = 266.005028
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    16
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 13.228761  worstDecline = 2.433683  initImprovement = 5.428219  initValue = 271.433247
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    17
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.554387  worstDecline = 2.888233  initImprovement = 5.454210  initValue = 276.887457
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    18
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 8.013573  worstDecline = 2.113786  initImprovement = 5.291577  initValue = 282.179034
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    19
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.176032  worstDecline = 1.823941  initImprovement = 5.563220  initValue = 287.742254
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    20
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 12.706992  worstDecline = 2.858046  initImprovement = 5.561095  initValue = 293.303349
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    21
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.389049  worstDecline = 2.697238  initImprovement = 5.453029  initValue = 298.756378
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    22
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 8.828980  worstDecline = 2.703179  initImprovement = 5.381719  initValue = 304.138098
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    23
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 12.392548  worstDecline = 3.107260  initImprovement = 5.386894  initValue = 309.524992
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    24
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 7.716980  worstDecline = 2.559246  initImprovement = 5.114651  initValue = 314.639643
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    25
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.711920  worstDecline = 2.804632  initImprovement = 4.931633  initValue = 319.571276
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    26
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.108836  worstDecline = 2.817717  initImprovement = 5.281642  initValue = 324.852919
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    27
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.469956  worstDecline = 2.278547  initImprovement = 5.051438  initValue = 329.904356
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    28
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.245506  worstDecline = 2.244586  initImprovement = 4.905880  initValue = 334.810236
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    29
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.867427  worstDecline = 2.589125  initImprovement = 5.223795  initValue = 340.034031
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    30
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 13.046382  worstDecline = 2.968772  initImprovement = 5.342014  initValue = 345.376045
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    31
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 7.861519  worstDecline = 2.141893  initImprovement = 5.044564  initValue = 350.420609
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    32
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 15.374300  worstDecline = 2.241791  initImprovement = 5.382127  initValue = 355.802736
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    33
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.574212  worstDecline = 2.647233  initImprovement = 5.408583  initValue = 361.211319
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    34
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.949549  worstDecline = 2.954268  initImprovement = 5.353500  initValue = 366.564819
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    35
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.765674  worstDecline = 2.416090  initImprovement = 5.279994  initValue = 371.844813
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    36
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.707816  worstDecline = 2.692372  initImprovement = 5.399886  initValue = 377.244699
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    37
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 7.882304  worstDecline = 2.838059  initImprovement = 5.223399  initValue = 382.468098
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    38
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 15.273430  worstDecline = 2.759393  initImprovement = 5.742052  initValue = 388.210150
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    39
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 8.728965  worstDecline = 2.616507  initImprovement = 5.397127  initValue = 393.607277
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    40
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.254731  worstDecline = 2.564138  initImprovement = 5.093194  initValue = 398.700471
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    41
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 12.503392  worstDecline = 2.871400  initImprovement = 5.285222  initValue = 403.985692
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    42
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.906153  worstDecline = 1.908084  initImprovement = 5.288609  initValue = 409.274301
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    43
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 6.004390  worstDecline = 1.676424  initImprovement = 4.878964  initValue = 414.153265
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    44
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.099783  worstDecline = 2.608983  initImprovement = 5.085692  initValue = 419.238957
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    45
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.693938  worstDecline = 2.387751  initImprovement = 5.010625  initValue = 424.249582
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    46
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 9.542047  worstDecline = 2.678723  initImprovement = 4.915893  initValue = 429.165475
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    47
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.532206  worstDecline = 2.439291  initImprovement = 4.964717  initValue = 434.130192
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    48
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.506073  worstDecline = 2.426812  initImprovement = 5.157450  initValue = 439.287642
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    49
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 10.523728  worstDecline = 2.357274  initImprovement = 5.084709  initValue = 444.372351
+# of vectors = 1, # of DP backups = 1
+
+stepId =
+
+    50
+
+2046 edges, 1023 nodes, 1024 leaves
+
+bestImprovement = 11.125536  worstDecline = 2.307045  initImprovement = 5.106268  initValue = 449.478618
+# of vectors = 1, # of DP backups = 1
+
+Value function and policy saved in ../files/test_comp/spudd_sperseus/sysadmin_pomdp.sysadmin_inst_pomdp__1_300bel_50iter_200size.mat
+ 
+a =
+ 
+DD[]:
+    [DDnode]
+
+
+ 
+
+b =
+
+     9
+
+diary('small_diary.log')
