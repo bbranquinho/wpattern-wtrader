@@ -1,13 +1,14 @@
-domain market_domain {
-  
+domain market_bool_multiple_stocks_bool_one_stock_domain {
+
 	requirements = {
+		continuous,
 		reward-deterministic,
 		partially-observed,
 		multivalued
 	};
 
 	types {
-	    ativos : object;
+	    ativo : object;
   		posicao_enum : { @vendido, @comprado, @fora };
   		tendencia_enum : { @alta, @baixa, @estavel };
   		observacao_enum : { @ponto_compra, @ponto_venda, @ponto_nada };
@@ -15,14 +16,14 @@ domain market_domain {
 	};
 
 	pvariables {
-	    TENDENCIA_PASSADO_PROB(tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
-        TENDENCIA_FUTURO_PROB(tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
-        OBSERVACAO_PROB(tendencia_enum, tendencia_enum, observacao_enum) : { non-fluent, real, default = 0.0 };
+	    TENDENCIA_PASSADO_PROB(ativo, tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
+        TENDENCIA_FUTURO_PROB(ativo, tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
+        OBSERVACAO_PROB(ativo, tendencia_enum, tendencia_enum, observacao_enum) : { non-fluent, real, default = 0.0 };
         REWARD_VALUE(acao_enum, posicao_enum, tendencia_enum, tendencia_enum) : { non-fluent, int, default = 0 };
 
-        posicao_investidor(posicao_enum): { state-fluent, bool, default = false };
-        tendencia_passado(tendencia_enum): { state-fluent, bool, default = false };
-		tendencia_futuro(tendencia_enum): { state-fluent, bool, default = false };
+        posicao_investidor(ativo, posicao_enum): { state-fluent, bool, default = false };
+        tendencia_passado(ativo, tendencia_enum): { state-fluent, bool, default = false };
+		tendencia_futuro(ativo, tendencia_enum): { state-fluent, bool, default = false };
 
 		negociar(acao_enum): { action-fluent, bool, default = false };
 
@@ -38,7 +39,7 @@ domain market_domain {
 				(posicao_investidor(@vendido) ^ negociar(@venda_dupla)) |
 				(posicao_investidor(@vendido) ^ negociar(@nada)) |
 				(posicao_investidor(@vendido) ^ ~(exists_{?n : acao_enum} negociar(?n)))
-			else if (?p == comprado) then
+			else if (?p == @comprado) then
 				(posicao_investidor(@fora) ^ negociar(@compra)) |
 				(posicao_investidor(@vendido) ^ negociar(@compra_dupla)) |
 				(posicao_investidor(@comprado) ^ negociar(@compra)) |
@@ -149,11 +150,11 @@ domain market_domain {
 }
 
 // Define non-fluents here.
-non-fluents market_non_fluent {
-	domain = market_domain;
+non-fluents market_bool_multiple_stocks_bool_one_stock_non_fluent {
+	domain = market_bool_multiple_stocks_bool_one_stock_domain;
 
 	objects {
-		ativos : { bvsp };
+		ativo : { bvsp };
 	};
 
 	non-fluents {
@@ -390,9 +391,9 @@ non-fluents market_non_fluent {
 
 }
 
-instance market_instance_01 {
-	domain = market_domain;
-	non-fluents = market_non_fluent;
+instance market_bool_multiple_stocks_bool_one_stock_instance_01 {
+	domain = market_bool_multiple_stocks_bool_one_stock_domain;
+	non-fluents = market_bool_multiple_stocks_bool_one_stock_non_fluent;
 
 	init-state {
 		posicao_investidor(@fora);

@@ -1,6 +1,7 @@
-domain market_domain {
+domain market_enum_switch_domain {
   
 	requirements = {
+		continuous,
 		reward-deterministic,
 		partially-observed,
 		multivalued
@@ -150,8 +151,8 @@ domain market_domain {
 }
 
 // Define non-fluents here.
-non-fluents market_non_fluent {
-	domain = market_domain;
+non-fluents market_enum_switch_non_fluent {
+	domain = market_enum_switch_domain;
 
 	objects {
 		ativos : { bvsp };
@@ -391,9 +392,9 @@ non-fluents market_non_fluent {
 
 }
 
-instance market_instance_01 {
-	domain = market_domain;
-	non-fluents = market_non_fluent;
+instance market_enum_switch_instance_01 {
+	domain = market_enum_switch_domain;
+	non-fluents = market_enum_switch_non_fluent;
 
 	init-state {
 		posicao_investidor(@fora);

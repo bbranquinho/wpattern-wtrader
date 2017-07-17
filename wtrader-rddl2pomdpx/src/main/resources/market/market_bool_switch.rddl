@@ -1,28 +1,29 @@
-domain market_domain {
+domain market_bool_switch_domain {
   
 	requirements = {
+		continuous,
 		reward-deterministic,
 		partially-observed,
 		multivalued
 	};
 
 	types {
-	    ativo : object;
-  		posicao_enum : { @vendido, @comprado, @fora };
+	    ativos : object;
   		tendencia_enum : { @alta, @baixa, @estavel };
+  		posicao_enum : { @vendido, @comprado, @fora };
   		observacao_enum : { @ponto_compra, @ponto_venda, @ponto_nada };
   		acao_enum : { @compra, @compra_dupla, @venda, @venda_dupla, @nada };
 	};
 
 	pvariables {
-	    TENDENCIA_PASSADO_PROB(ativo, tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
-        TENDENCIA_FUTURO_PROB(ativo, tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
-        OBSERVACAO_PROB(ativo, tendencia_enum, tendencia_enum, observacao_enum) : { non-fluent, real, default = 0.0 };
+	    TENDENCIA_PASSADO_PROB(tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
+        TENDENCIA_FUTURO_PROB(tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
+        OBSERVACAO_PROB(tendencia_enum, tendencia_enum, observacao_enum) : { non-fluent, real, default = 0.0 };
         REWARD_VALUE(acao_enum, posicao_enum, tendencia_enum, tendencia_enum) : { non-fluent, int, default = 0 };
 
-        posicao_investidor(ativo, posicao_enum): { state-fluent, bool, default = false };
-        tendencia_passado(ativo, tendencia_enum): { state-fluent, bool, default = false };
-		tendencia_futuro(ativo, tendencia_enum): { state-fluent, bool, default = false };
+        posicao_investidor(posicao_enum): { state-fluent, bool, default = false };
+        tendencia_passado(tendencia_enum): { state-fluent, bool, default = false };
+		tendencia_futuro(tendencia_enum): { state-fluent, bool, default = false };
 
 		negociar(acao_enum): { action-fluent, bool, default = false };
 
@@ -31,27 +32,28 @@ domain market_domain {
 
 	cpfs {
 		posicao_investidor'(?p) =
-			if (?p == @vendido) then
-				(posicao_investidor(@fora) ^ negociar(@venda)) |
-				(posicao_investidor(@comprado) ^ negociar(@venda_dupla)) |
-				(posicao_investidor(@vendido) ^ negociar(@venda)) |
-				(posicao_investidor(@vendido) ^ negociar(@venda_dupla)) |
-				(posicao_investidor(@vendido) ^ negociar(@nada)) |
-				(posicao_investidor(@vendido) ^ ~(exists_{?n : acao_enum} negociar(?n)))
-			else if (?p == @comprado) then
-				(posicao_investidor(@fora) ^ negociar(@compra)) |
-				(posicao_investidor(@vendido) ^ negociar(@compra_dupla)) |
-				(posicao_investidor(@comprado) ^ negociar(@compra)) |
-				(posicao_investidor(@comprado) ^ negociar(@compra_dupla)) |
-				(posicao_investidor(@comprado) ^ negociar(@nada)) |
-				(posicao_investidor(@comprado) ^ ~(exists_{?n : acao_enum} negociar(?n)))
-			else
-				(posicao_investidor(@vendido) ^ negociar(@compra)) |
-				(posicao_investidor(@comprado) ^ negociar(@venda)) |
-				(posicao_investidor(@fora) ^ negociar(@compra_dupla)) |
-				(posicao_investidor(@fora) ^ negociar(@venda_dupla)) |
-				(posicao_investidor(@fora) ^ negociar(@nada)) |
-				(posicao_investidor(@fora) ^ ~(exists_{?n : acao_enum} negociar(?n)));
+			switch (?p) {
+				case @vendido  : (posicao_investidor(@fora) ^ negociar(@venda)) |
+								 (posicao_investidor(@comprado) ^ negociar(@venda_dupla)) |
+								 (posicao_investidor(@vendido) ^ negociar(@venda)) |
+								 (posicao_investidor(@vendido) ^ negociar(@venda_dupla)) |
+								 (posicao_investidor(@vendido) ^ negociar(@nada)) |
+								 (posicao_investidor(@vendido) ^ ~(exists_{?n : acao_enum} negociar(?n))),
+
+				case @comprado : (posicao_investidor(@fora) ^ negociar(@compra)) |
+								 (posicao_investidor(@vendido) ^ negociar(@compra_dupla)) |
+								 (posicao_investidor(@comprado) ^ negociar(@compra)) |
+								 (posicao_investidor(@comprado) ^ negociar(@compra_dupla)) |
+								 (posicao_investidor(@comprado) ^ negociar(@nada)) |
+								 (posicao_investidor(@comprado) ^ ~(exists_{?n : acao_enum} negociar(?n))),
+
+				case @fora     : (posicao_investidor(@vendido) ^ negociar(@compra)) |
+								 (posicao_investidor(@comprado) ^ negociar(@venda)) |
+								 (posicao_investidor(@fora) ^ negociar(@compra_dupla)) |
+								 (posicao_investidor(@fora) ^ negociar(@venda_dupla)) |
+								 (posicao_investidor(@fora) ^ negociar(@nada)) |
+								 (posicao_investidor(@fora) ^ ~(exists_{?n : acao_enum} negociar(?n)))
+			};
 
         tendencia_passado'(?x) =
             if (tendencia_passado(@alta) ^ tendencia_futuro(@alta)) then
@@ -149,11 +151,11 @@ domain market_domain {
 }
 
 // Define non-fluents here.
-non-fluents market_non_fluent {
-	domain = market_domain;
+non-fluents market_bool_switch_non_fluent {
+	domain = market_bool_switch_domain;
 
 	objects {
-		ativo : { bvsp };
+		ativos : { bvsp };
 	};
 
 	non-fluents {
@@ -390,9 +392,9 @@ non-fluents market_non_fluent {
 
 }
 
-instance market_instance_01 {
-	domain = market_domain;
-	non-fluents = market_non_fluent;
+instance market_bool_switch_instance_01 {
+	domain = market_bool_switch_domain;
+	non-fluents = market_bool_switch_non_fluent;
 
 	init-state {
 		posicao_investidor(@fora);

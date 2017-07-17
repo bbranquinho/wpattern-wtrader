@@ -1,12 +1,12 @@
-domain market_domain {
-  
+domain market_bool_multiple_stocks_two_stocks_domain {
+
 	requirements = {
 		continuous,
 		reward-deterministic,
 		partially-observed,
 		multivalued
 	};
-	
+
 	types {
 		ativo : object;
   		tendencia_enum : { @alta, @baixa, @estavel };
@@ -20,16 +20,16 @@ domain market_domain {
 		TENDENCIA_FUTURO_PROB(ativo, tendencia_enum, tendencia_enum, tendencia_enum) : { non-fluent, real, default = 0.0 };
 		OBSERVACAO_PROB(ativo, tendencia_enum, tendencia_enum, observacao_enum) : { non-fluent, real, default = 0.0 };
 		REWARD_VALUE(acao_enum, posicao_enum, tendencia_enum, tendencia_enum) : { non-fluent, int, default = 0 };
-	
+
 		tendencia_passado(ativo): { state-fluent, tendencia_enum, default = @estavel };
 		tendencia_futuro(ativo): { state-fluent, tendencia_enum, default = @estavel };
 		posicao_investidor(ativo): { state-fluent, posicao_enum, default = @fora };
-		
+
 		negociar(ativo): { action-fluent, acao_enum, default = @nada };
-		
+
 		observacao(ativo): { observ-fluent, observacao_enum };
 	};
-	
+
 	cpfs {
 		posicao_investidor'(?a) = if (((posicao_investidor(?a) == @fora) ^ (negociar(?a) == @venda)) |
 									 ((posicao_investidor(?a) == @comprado) ^ (negociar(?a) == @venda_dupla)) |
@@ -46,171 +46,171 @@ domain market_domain {
 									 ((posicao_investidor(?a) == @comprado) ^ (negociar(?a) == @nada)) |
 									 ((posicao_investidor(?a) == @comprado) ^ ~(exists_{?n : acao_enum} negociar(?a) == ?n))) then
 									 @comprado
-								  else 
+								  else
 									 @fora;
-		
+
 		tendencia_passado'(?a) = Discrete(tendencia_enum,
 								@alta : if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @alta, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @baixa, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @estavel, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @alta, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @baixa, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @estavel, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @alta, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @baixa, @alta)
-											
+
 										else
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @estavel, @alta),
-											
+
 								@baixa : if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @alta, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @baixa, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @estavel, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @alta, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @baixa, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @estavel, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @alta, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @baixa, @baixa)
-											
+
 										else
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @estavel, @baixa),
-											
+
 								@estavel : if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @alta, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @baixa, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_PASSADO_PROB(?a, @alta, @estavel, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @alta, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @baixa, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_PASSADO_PROB(?a, @baixa, @estavel, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @alta, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @baixa, @estavel)
-											
+
 										else
 											TENDENCIA_PASSADO_PROB(?a, @estavel, @estavel, @estavel)
 							 );
-		
+
 		tendencia_futuro'(?a) = Discrete(tendencia_enum,
 								@alta : if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @alta, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @baixa, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @estavel, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @alta, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @baixa, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @estavel, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @alta, @alta)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @baixa, @alta)
-											
+
 										else
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @estavel, @alta),
-											
+
 								@baixa : if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @alta, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @baixa, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @estavel, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @alta, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @baixa, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @estavel, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @alta, @baixa)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @baixa, @baixa)
-											
+
 										else
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @estavel, @baixa),
-											
+
 								@estavel : if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @alta, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @baixa, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_FUTURO_PROB(?a, @alta, @estavel, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @alta, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @baixa, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
 											TENDENCIA_FUTURO_PROB(?a, @baixa, @estavel, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @alta, @estavel)
-											
+
 										else if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @baixa, @estavel)
-											
+
 										else
 											TENDENCIA_FUTURO_PROB(?a, @estavel, @estavel, @estavel)
 							 );
@@ -218,100 +218,100 @@ domain market_domain {
  		observacao(?a) = Discrete(observacao_enum,
  							@ponto_compra: if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
  												OBSERVACAO_PROB(?a, @alta, @alta, @ponto_compra)
- 												
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @alta, @ponto_compra)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
  										   		OBSERVACAO_PROB(?a, @estavel, @alta, @ponto_compra)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @alta, @baixa, @ponto_compra)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @baixa, @ponto_compra)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @estavel, @baixa, @ponto_compra)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
  										   		OBSERVACAO_PROB(?a, @alta, @estavel, @ponto_compra)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @estavel, @ponto_compra)
- 										   		
+
  										   else
  										   		OBSERVACAO_PROB(?a, @estavel, @estavel, @ponto_compra),
- 										   		
+
  							@ponto_venda: if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
  												OBSERVACAO_PROB(?a, @alta, @alta, @ponto_venda)
- 												
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @alta, @ponto_venda)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
  										   		OBSERVACAO_PROB(?a, @estavel, @alta, @ponto_venda)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @alta, @baixa, @ponto_venda)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @baixa, @ponto_venda)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @estavel, @baixa, @ponto_venda)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
  										   		OBSERVACAO_PROB(?a, @alta, @estavel, @ponto_venda)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @estavel, @ponto_venda)
- 										   		
+
  										   else
  										   		OBSERVACAO_PROB(?a, @estavel, @estavel, @ponto_venda),
- 										   		
+
  							@ponto_nada: if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @alta)) then
  												OBSERVACAO_PROB(?a, @alta, @alta, @ponto_nada)
- 												
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @alta)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @alta, @ponto_nada)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @alta)) then
  										   		OBSERVACAO_PROB(?a, @estavel, @alta, @ponto_nada)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @alta, @baixa, @ponto_nada)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @baixa, @ponto_nada)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @estavel) ^ (tendencia_futuro(?a) == @baixa)) then
  										   		OBSERVACAO_PROB(?a, @estavel, @baixa, @ponto_nada)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @alta) ^ (tendencia_futuro(?a) == @estavel)) then
  										   		OBSERVACAO_PROB(?a, @alta, @estavel, @ponto_nada)
- 										   		
+
  										   else	if ((tendencia_passado(?a) == @baixa) ^ (tendencia_futuro(?a) == @estavel)) then
  										   		OBSERVACAO_PROB(?a, @baixa, @estavel, @ponto_nada)
- 										   		
+
  										   else
  										   		OBSERVACAO_PROB(?a, @estavel, @estavel, @ponto_nada)
  						);
 	};
- 
+
  	// sum_{?a : acao_enum} REWARD_VALUE(negociar(?a), posicao_investidor(?a), tendencia_passado'(?a), tendencia_futuro'(?a))
 	reward = sum_{?a : ativo} REWARD_VALUE(negociar(?a), posicao_investidor(?a), tendencia_passado'(?a), tendencia_futuro'(?a));
 }
 
 // Define non-fluents here.
-non-fluents market_non_fluent {
-	domain = market_domain;
-	
-	objects { 
+non-fluents market_bool_multiple_stocks_two_stocks_non_fluent {
+	domain = market_bool_multiple_stocks_two_stocks_domain;
+
+	objects {
 		ativo : { petr4, vale5 };
 	};
-  
-	non-fluents { 
+
+	non-fluents {
 		TENDENCIA_PASSADO_PROB(petr4,    @alta,    @alta, @alta) = 0.780;
 		TENDENCIA_PASSADO_PROB(petr4,    @alta,   @baixa, @alta) = 0.603;
 		TENDENCIA_PASSADO_PROB(petr4,    @alta, @estavel, @alta) = 0.737;
@@ -401,7 +401,7 @@ non-fluents market_non_fluent {
 		OBSERVACAO_PROB(petr4,    @alta, @estavel, @ponto_nada) = 0.952;
 		OBSERVACAO_PROB(petr4,   @baixa, @estavel, @ponto_nada) = 0.933;
 		OBSERVACAO_PROB(petr4, @estavel, @estavel, @ponto_nada) = 0.926;
-		
+
 		TENDENCIA_PASSADO_PROB(vale5,    @alta,    @alta, @alta) = 0.780;
 		TENDENCIA_PASSADO_PROB(vale5,    @alta,   @baixa, @alta) = 0.603;
 		TENDENCIA_PASSADO_PROB(vale5,    @alta, @estavel, @alta) = 0.737;
@@ -491,7 +491,7 @@ non-fluents market_non_fluent {
 		OBSERVACAO_PROB(vale5,    @alta, @estavel, @ponto_nada) = 0.952;
 		OBSERVACAO_PROB(vale5,   @baixa, @estavel, @ponto_nada) = 0.933;
 		OBSERVACAO_PROB(vale5, @estavel, @estavel, @ponto_nada) = 0.926;
-		
+
 		REWARD_VALUE(@compra, @comprado,    @alta,    @alta) = -25;
 		REWARD_VALUE(@compra, @comprado,    @alta,   @baixa) = -25;
 		REWARD_VALUE(@compra, @comprado,    @alta, @estavel) = -25;
@@ -519,7 +519,7 @@ non-fluents market_non_fluent {
 		REWARD_VALUE(@compra,     @fora, @estavel,    @alta) = 5;
 		REWARD_VALUE(@compra,     @fora, @estavel,   @baixa) = -5;
 		REWARD_VALUE(@compra,     @fora, @estavel, @estavel) = 0;
-		
+
 		REWARD_VALUE(@compra_dupla, @comprado,    @alta,    @alta) = -25;
 		REWARD_VALUE(@compra_dupla, @comprado,    @alta,   @baixa) = -25;
 		REWARD_VALUE(@compra_dupla, @comprado,    @alta, @estavel) = -25;
@@ -547,7 +547,7 @@ non-fluents market_non_fluent {
 		REWARD_VALUE(@compra_dupla,     @fora, @estavel,    @alta) = -25;
 		REWARD_VALUE(@compra_dupla,     @fora, @estavel,   @baixa) = -25;
 		REWARD_VALUE(@compra_dupla,     @fora, @estavel, @estavel) = -25;
-		
+
 		REWARD_VALUE(@venda, @comprado,    @alta,    @alta) = -2;
 		REWARD_VALUE(@venda, @comprado,    @alta,   @baixa) = 0;
 		REWARD_VALUE(@venda, @comprado,    @alta, @estavel) = 0;
@@ -575,7 +575,7 @@ non-fluents market_non_fluent {
 		REWARD_VALUE(@venda,     @fora, @estavel,    @alta) = -5;
 		REWARD_VALUE(@venda,     @fora, @estavel,   @baixa) = 5;
 		REWARD_VALUE(@venda,     @fora, @estavel, @estavel) = 0;
-		
+
 		REWARD_VALUE(@venda_dupla, @comprado,    @alta,    @alta) = -10;
 		REWARD_VALUE(@venda_dupla, @comprado,    @alta,   @baixa) = 5;
 		REWARD_VALUE(@venda_dupla, @comprado,    @alta, @estavel) = -2;
@@ -603,7 +603,7 @@ non-fluents market_non_fluent {
 		REWARD_VALUE(@venda_dupla,     @fora, @estavel,    @alta) = -25;
 		REWARD_VALUE(@venda_dupla,     @fora, @estavel,   @baixa) = -25;
 		REWARD_VALUE(@venda_dupla,     @fora, @estavel, @estavel) = -25;
-		
+
 		REWARD_VALUE(@nada, @comprado,    @alta,    @alta) = 10;
 		REWARD_VALUE(@nada, @comprado,    @alta,   @baixa) = 0;
 		REWARD_VALUE(@nada, @comprado,    @alta, @estavel) = 3;
@@ -634,10 +634,10 @@ non-fluents market_non_fluent {
 	};
 }
 
-instance market_instance_01 {
-	domain = market_domain;
-	non-fluents = market_non_fluent;
-	
+instance market_bool_multiple_stocks_two_stocks_instance_01 {
+	domain = market_bool_multiple_stocks_two_stocks_domain;
+	non-fluents = market_bool_multiple_stocks_two_stocks_non_fluent;
+
 	init-state {
 		posicao_investidor(petr4) = @fora;
 		posicao_investidor(vale5) = @fora;
